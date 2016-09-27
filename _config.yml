@@ -3,7 +3,7 @@
 title: Blog - brucewar
 author: Bruce Wang
 email: wjl891014@gmail.com
-baseurl: ""
+baseurl: "/blog"
 url: "http://brucewar.github.com"
 
 permalink: /blog/:year/:month/:day/:title/
