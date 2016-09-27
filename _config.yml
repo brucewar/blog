@@ -6,6 +6,8 @@ email: wjl891014@gmail.com
 baseurl: "/blog"
 url: "http://brucewar.github.com"
 
-permalink: /blog/:year/:month/:day/:title/
+include: [about, links, projects, _posts]
+
+permalink: /blog/:year/:month/:day/:title
 # Build settings
 markdown: kramdown
