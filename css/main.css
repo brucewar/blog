@@ -12,6 +12,9 @@ html,body{
 	padding: .5em 0;
     border-bottom: 1px solid #cccccc;
 }
+#container>header>h1{
+    margin: 0;
+}
 #container>nav{
 	font-family: Georgia,serif,"Microsoft YaHei";
     font-size: 1.1em;
