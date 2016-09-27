@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta http-equiv="pragma" content="no-cache" />
+    <meta name="author" content="brucewar" />
+	<meta name="keywords" content="Web前端工程师 FE brucewar" />	
+	<meta name="description" content="brucewar（一位忠实的技术追求者！）的个人博客" />
+	<link rel="icon" href="/img/favicon.ico">
+	<link rel="apple-touch-icon" href="/img/favicon.png">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/blog.css">
+	<title>{{ page.title }}</title>
+</head>
+<body>
+	<div id="container">
+		{% include header.html %}
+		{% include nav.html %}
+　　	<article class="content">{{ content }}</article>
+		{% include footer.html %}
+	</div>
+</body>
+</html>

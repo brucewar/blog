@@ -1,0 +1,11 @@
+# coding: utf-8
+
+title: Blog - brucewar
+author: Bruce Wang
+email: wjl891014@gmail.com
+baseurl: ""
+url: "http://brucewar.github.com"
+
+permalink: /blog/:year/:month/:day/:title/
+# Build settings
+markdown: kramdown

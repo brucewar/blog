@@ -1,0 +1,82 @@
+html,body{
+	font-size: 20px;
+	font-family: Georgia, "Microsoft YaHei", serif;
+	color: #000;
+	background-color: #fff;
+}
+#container{
+	width: 600px;
+	margin: 2rem auto;
+}
+#container>header{
+	padding: .5em 0;
+    border-bottom: 1px solid #cccccc;
+}
+#container>nav{
+	font-family: Georgia,serif,"Microsoft YaHei";
+    font-size: 1.1em;
+    text-transform: uppercase;
+    float: right;
+    margin-right: -12em;
+    width: 9em;
+}
+#container>nav a{
+	display: block;
+    padding: .7em 1em;
+    color: #000000;
+    text-decoration: none;
+}
+#container>nav a:hover{
+	background-color: #0181EB;
+    text-decoration: none;
+    color: #f9f9f9;
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #container>nav {
+        float:none;
+        margin-left: -1em;
+        width: 115%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #container>nav span {
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+    }
+
+    #container .content {
+        border-top: 1px solid #ccc;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #container {
+        width:100%;
+        padding: 0 0;
+    }
+
+    #container>header {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    #container .content {
+        margin-left: 1em;
+        margin-right: 1em;
+        border-top: 1px solid #ccc;
+    }
+
+    #container>nav {
+        float: none;
+        margin: 1em auto;
+        width: 100%;
+    }
+
+    #container>nav a {
+        display: inline-block;
+    }
+}
