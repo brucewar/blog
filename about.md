@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /about
+permalink: {{ site.baseurl }}/about
 ---
 
 一位忠实的技术追求者！

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-permalink: /projects
+permalink: {{ site.baseurl }}/projects
 ---
 
 * [duapp](https://github.com/brucewar/duapp)

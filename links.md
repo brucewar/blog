@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Links
-permalink: /links
+permalink: {{ site.baseurl }}/links
 ---
 
 * [Fantasy Shao](http://fantasy.codes/)
