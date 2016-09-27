@@ -1,0 +1,2 @@
+# blog
+brucewar.github.com
