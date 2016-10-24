@@ -1,2 +1,2 @@
 # blog
-brucewar.me
+[brucewar.me](brucewar.me)
