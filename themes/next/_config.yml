@@ -268,11 +268,11 @@ duoshuo_hotartical: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: 9VykxYQ4VrbLVaHkD8Lz0oH_xO_CreNv87XYe-opxQE
 
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-87259783-1
 
 # CNZZ count
 #cnzz_siteid:
