@@ -53,6 +53,7 @@
     <div class="back-to-top">
       <i class="fa fa-arrow-up"></i>
     </div>
+		{% include '_partials/music.swig' %}
   </div>
 
   {% include '_scripts/vendors.swig' %}
