@@ -26,8 +26,9 @@ since: 2016
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories
+  pastime: /pastime
   about: /about
+  categories: /categories
   archives: /archives
   tags: /tags
   #commonweal: /404.html
@@ -42,6 +43,7 @@ menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
+  pastime: heart
   about: user
   categories: th
   tags: tags
