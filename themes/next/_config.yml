@@ -222,7 +222,7 @@ scroll_to_more: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 150
+  length: 1000
 
 
 # Wechat Subscriber
@@ -254,7 +254,7 @@ baidu_analytics: 7fabfd44062c2222a2c44c552ea79602
 duoshuo_shortname: brucewar
 
 # Disqus
-#disqus_shortname:
+disqus_shortname: brucewar89
 
 # Baidu Share
 # Available value:

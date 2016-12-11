@@ -4,7 +4,8 @@
       <div class="ds-thread" data-thread-key="{{ page.path }}"
            data-title="{{ page.title }}" data-url="{{ page.permalink }}">
       </div>
-    {% elseif theme.disqus_shortname %}
+    {% endif %}
+    {% if theme.disqus_shortname %}
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the

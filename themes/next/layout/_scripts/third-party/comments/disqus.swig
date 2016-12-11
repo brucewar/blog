@@ -1,4 +1,4 @@
-{% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname %}
+{% if (theme.disqus and theme.disqus.shortname) or theme.disqus_shortname %}
 
   {% if theme.disqus_shortname %}
 
