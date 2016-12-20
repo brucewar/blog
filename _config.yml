@@ -78,6 +78,3 @@ deploy:
 - type: git
   repo: git@github.com:brucewar/brucewar.github.io.git
   branch: master
-- type: git
-  repo: git@git.coding.net:brucewaar/brucewaar.git
-  branch: master
