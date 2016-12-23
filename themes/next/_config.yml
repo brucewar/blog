@@ -31,6 +31,7 @@ menu:
   categories: /categories
   archives: /archives
   tags: /tags
+  gallery: /gallery
   #commonweal: /404.html
 
 
@@ -48,6 +49,7 @@ menu_icons:
   categories: th
   tags: tags
   archives: archive
+  gallery: instagram
   commonweal: heartbeat
 
 
@@ -190,7 +192,7 @@ links:
   BaoHongfei: http://baohongfei.com
   ZhuShenshen: http://coderaladdin.com
   Fantasy Shao: http://fantasy.codes
-  Delia: http://deliazhi.github.io
+  Delia: http://deliazhi.com
 
 
 # ---------------------------------------------------------------
