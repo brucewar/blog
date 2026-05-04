@@ -12,8 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://brucewar.me
-root: /
+url: http://brucewar.cn
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -72,9 +71,37 @@ search:
   format: html
   limit: 10000
 
+# Minifier
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  ouput:
+  compress:
+  exclude:
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  exclude: jpg,png
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@github.com:brucewar/brucewar.github.io.git
-  branch: master
+  - type: git
+    repo: git@github.com:brucewar/brucewar.github.io.git
+    branch: master

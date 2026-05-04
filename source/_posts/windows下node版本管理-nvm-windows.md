@@ -1,7 +1,7 @@
 ---
 title: ' windows下node版本管理:nvm-windows'
 date: 2017-01-13 09:18:18
-categories: nvm
+categories: Node.js
 tags: [nvm,node.js,nvm-windows]
 ---
 最近工作上接手了两个项目，可它们依赖的node版本不同，于是想到了之前用的**nvm**（Node Version Manager）。

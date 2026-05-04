@@ -16,9 +16,6 @@ rss:
 # Specify the date when the site was setup
 since: 2016
 
-
-
-
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -31,9 +28,8 @@ menu:
   categories: /categories
   archives: /archives
   tags: /tags
-  gallery: /gallery
+  # gallery: /gallery
   #commonweal: /404.html
-
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -52,9 +48,6 @@ menu_icons:
   gallery: instagram
   commonweal: heartbeat
 
-
-
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -63,7 +56,6 @@ menu_icons:
 #scheme: Muse
 #scheme: Mist
 scheme: Pisces
-
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -77,7 +69,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: fonts.lug.ustc.edu.cn
 
   # Global font settings used on <body> element.
   global:
@@ -110,13 +102,9 @@ font:
     external: true
     family:
 
-
-
-
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
-
 
 # Social Links
 # Key is the link label showing to end users.
@@ -128,7 +116,6 @@ social:
   知乎: https://www.zhihu.com/people/brucewar
   Twitter: https://twitter.com/brucewar89
   FaceBook: https://www.facebook.com/brucewar89
-
 
 # Social Links Icons
 # Icon Mapping:
@@ -144,12 +131,10 @@ social_icons:
   Weibo: weibo
   FaceBook: facebook
 
-
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 avatar: /images/default.png
-
 
 # Table Of Contents in the Sidebar
 toc:
@@ -158,13 +143,11 @@ toc:
   # Automatically add list number to toc.
   number: true
 
-
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 #creative_commons: by-nc-sa
 #creative_commons:
-
 
 sidebar:
   # Sidebar Position, available value: left | right
@@ -183,17 +166,18 @@ sidebar:
 
 reward_comment: Enjoy it? Donate me!您的支持将鼓励我继续创作！
 alipay: /images/donate.jpg
+wechatpay: /images/wechatpay.jpg
 
 # Blogrolls
 links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  BaoHongfei: http://baohongfei.com
+  BaoHongfei: http://blog.baohongfei.com
   ZhuShenshen: http://coderaladdin.com
   Fantasy Shao: http://fantasy.codes
   Delia: http://deliazhi.com
-
+  徐胖子: http://www.seaofstars.tech
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -208,17 +192,14 @@ custom_logo:
   enabled: false
   image:
 
-
 # Code Highlight theme
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night bright
 
-
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
-
 
 # Automatically Excerpt. Not recommand.
 # Please use <!-- more --> in the post to control excerpt accurately.
@@ -226,15 +207,11 @@ auto_excerpt:
   enable: true
   length: 1000
 
-
 # Wechat Subscriber
 #wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
-
-
+#enabled: true
+#qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+#description: ex. subscribe to my blog by scanning my public wechat account
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -245,7 +222,6 @@ mathjax:
   enable: false
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-
 # Swiftype Search API Key
 #swiftype_key:
 
@@ -253,10 +229,16 @@ mathjax:
 baidu_analytics: 7fabfd44062c2222a2c44c552ea79602
 
 # Duoshuo ShortName
-duoshuo_shortname: brucewar
+# duoshuo_shortname: brucewar
 
 # Disqus
 disqus_shortname: brucewar
+
+# 网易云跟帖
+# cloudtie:  3cf2e9ed8b344d3f14b8d4f559815579
+
+# 来必力
+livere: false
 
 # Baidu Share
 # Available value:
@@ -266,7 +248,7 @@ disqus_shortname: brucewar
 
 # Share
 jiathis: true
-#add_this_id:
+add_this_id: 2133796
 
 # Share
 duoshuo_share: true
@@ -274,15 +256,13 @@ duoshuo_hotartical: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-google_site_verification: 9VykxYQ4VrbLVaHkD8Lz0oH_xO_CreNv87XYe-opxQE
-
+google_site_verification: j9wizqxImtYQlXqEo8nOjHd6G4CfifWn7J_h-fOjpVg
 
 # Google Analytics
 # google_analytics: UA-87259783-1
 
 # CNZZ count
 #cnzz_siteid:
-
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
@@ -293,16 +273,14 @@ duoshuo_info:
   user_id: 6335656177459791000
   admin_nickname: Author
 
-
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
   enable: false
-  app_id:       #<app_id>
-  fb_admin:     #<user_id>
-  like_button:  #true
-  webmaster:    #true
-
+  app_id: #<app_id>
+  fb_admin: #<user_id>
+  like_button: #true
+  webmaster: #true
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
@@ -335,8 +313,6 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
 
-
-
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
@@ -347,7 +323,6 @@ use_motion: true
 
 # Fancybox
 fancybox: true
-
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -389,7 +364,6 @@ vendors:
   # Internal version: 4.4.0
   # http://fontawesome.io/
   fontawesome:
-
 
 # Assets
 css: css

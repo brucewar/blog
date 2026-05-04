@@ -1,7 +1,7 @@
 ---
 title: npm3.0新的依赖解决方案
 date: 2016-12-20 23:02:20
-categories: npm
+categories: Node.js
 tags: [npm,v3]
 ---
 

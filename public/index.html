@@ -18,7 +18,7 @@
 
 
 
-  <meta name="google-site-verification" content="9VykxYQ4VrbLVaHkD8Lz0oH_xO_CreNv87XYe-opxQE" />
+  <meta name="google-site-verification" content="j9wizqxImtYQlXqEo8nOjHd6G4CfifWn7J_h-fOjpVg" />
 
 
 
@@ -63,7 +63,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Gloria Hallelujah:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="fonts.lug.ustc.edu.cn/css?family=Monda:300,300italic,400,400italic,700,700italic|Gloria Hallelujah:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -97,7 +97,7 @@
 <meta name="description" content="一位忠实的技术追求者！">
 <meta property="og:type" content="website">
 <meta property="og:title" content="brucewar">
-<meta property="og:url" content="http://brucewar.me/index.html">
+<meta property="og:url" content="http://brucewar.cn/index.html">
 <meta property="og:site_name" content="brucewar">
 <meta property="og:description" content="一位忠实的技术追求者！">
 <meta name="twitter:card" content="summary">
@@ -119,6 +119,8 @@
     }
   };
 </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6989699484348089" crossorigin="anonymous"></script>
 
   <title> brucewar </title>
 </head>
@@ -244,16 +246,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-gallery">
-          <a href="/gallery" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-instagram"></i> <br />
-            
-            Gallery
-          </a>
-        </li>
-      
 
       
         <li class="menu-item menu-item-search">
@@ -294,6 +286,1212 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/05/19/使用requestAnimationFrame实现通知栏滚动/" itemprop="url">
+                  使用requestAnimationFrame实现通知栏滚动
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2020-05-19T22:21:33+08:00" content="2020-05-19">
+              2020-05-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">Web前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2020/05/19/使用requestAnimationFrame实现通知栏滚动/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/19/使用requestAnimationFrame实现通知栏滚动/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2020/05/19/使用requestAnimationFrame实现通知栏滚动/" class="leancloud_visitors" data-flag-title="使用requestAnimationFrame实现通知栏滚动">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          requestAnimationFrame&#x662F;&#x4EC0;&#x4E48;window.requestAnimationFrame() &#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#x2014;&#x2014;&#x4F60;&#x5E0C;&#x671B;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#xFF0C;&#x5E76;&#x4E14;&#x8981;&#x6C42;&#x6D4F;&#x89C8;&#x5668;&#x5728;&#x4E0B;&#x6B21;&#x91CD;&#x7ED8;&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x66F4;&#x65B0;&#x52A8;&#x753B;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x4E00;&#x6B21;&#x91CD;&#x7ED8;&#x4E4B;&#x524D;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x91CD;&#x7ED8;&#x524D;&#x7EE7;&#x7EED;&#x66F4;&#x65B0;&#x4E0B;&#x4E00;&#x5E27;&#x52A8;&#x753B;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x5
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2020/05/19/使用requestAnimationFrame实现通知栏滚动/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/05/07/什么是thunk？/" itemprop="url">
+                  什么是thunk？
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2019-05-07T14:40:53+08:00" content="2019-05-07">
+              2019-05-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2019/05/07/什么是thunk？/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/07/什么是thunk？/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2019/05/07/什么是thunk？/" class="leancloud_visitors" data-flag-title="什么是thunk？">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          &#x95EE;&#xFF1A;&#x4EC0;&#x4E48;&#x662F;thunk&#xFF1F;&#x7B54;&#xFF1A;&#x7B2C;&#x4E00;&#x6B21;&#x542C;&#x5230;&#x8FD9;&#x4E2A;&#x8BCD;&#x662F;&#x901A;&#x8FC7;redux-thunk&#x8A00;&#x5F52;&#x6B63;&#x4F20;&#xFF0C;&#x5F53;&#x7B2C;&#x4E00;&#x6B21;&#x542C;&#x5230;Redux Thunk&#x65F6;&#xFF0C;&#x4EE4;&#x4EBA;&#x975E;&#x5E38;&#x56F0;&#x60D1;&#x3002;&#x5F88;&#x53EF;&#x80FD;&#x5C31;&#x662F;&#x56E0;&#x4E3A;thunk&#x8FD9;&#x4E2A;&#x8BCD;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8981;&#x5F04;&#x6E05;&#x695A;&#x8FD9;&#x4E00;&#x70B9;&#x3002;thunkthunk&#x662F;&#x51FD;&#x6570;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x8BCD;&#xFF0C;&#x4F46;&#x5B83;&#x4E0D;&#x4EC5;&#x4EC5;&#x53EA;&#x662F;&#x6211;&#x4EEC;&#x6240;&#x8BA4;&#x8BC6;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;123456function wrapper_function() {  // &#x8FD9;&#x5C31;&#x662
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2019/05/07/什么是thunk？/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/30/2017：清白之年/" itemprop="url">
+                  2017：清白之年
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-12-30T15:51:37+08:00" content="2017-12-30">
+              2017-12-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/30/2017：清白之年/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/12/30/2017：清白之年/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/12/30/2017：清白之年/" class="leancloud_visitors" data-flag-title="2017：清白之年">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          &#x8F6C;&#x773C;&#x53C8;&#x5230;&#x4E86;&#x5E74;&#x7EC8;&#xFF0C;&#x6211;&#x539F;&#x672C;&#x4E0D;&#x60F3;&#x5199;&#x4ECA;&#x5E74;&#x7684;&#x603B;&#x7ED3;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x60F3;&#x8BA9;&#x81EA;&#x5DF1;&#x5185;&#x5FC3;&#x518D;&#x7ECF;&#x5386;&#x8FD9;&#x4E00;&#x6BB5;&#x75DB;&#x82E6;&#x7684;&#x56DE;&#x5FC6;&#x3002;&#x8FD9;&#x4E00;&#x5E74;&#xFF0C;&#x7ECF;&#x5386;&#x4E86;&#x592A;&#x591A;&#xFF0C;&#x4E5F;&#x5931;&#x53BB;&#x592A;&#x591A;&#x3002;2016&#x5E74;12&#x6708;&#x5E95;&#xFF0C;&#x6211;&#x548C;&#x670B;&#x53CB;&#x5B9A;&#x597D;&#x4E86;&#x5143;&#x65E6;&#x53BB;&#x9EC4;&#x5C71;&#x770B;&#x65B0;&#x5E74;&#x65E5;&#x51FA;&#xFF0C;&#x7A81;&#x5982;&#x5176;&#x6765;&#x7684;&#x5669;&#x8017;&#xFF0C;&#x8BA9;&#x6211;&#x4E0D;&#x77E5;&#x6240;&#x63AA;&#x3002;&#x5802;&#x59D0;&#x544A;&#x8BC9;&#x6211;&#xFF0C;&#x7236;&#x4EB2;&#x5F97;&#x4E86;&#x5F88;&#x91CD;&#x7684;&#x75C5;&#xFF0C;&#x5F53;&#x65F6;&#xFF0C;&#x6211;&#x8111;&#x5B50;&#x4E00;&#x7247;&#x7A7A;&#x767D;&#x3002;&#x540E;&#x6765;&#x6211;&#x6253;&#
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/12/30/2017：清白之年/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/06/flexbox布局的响应式表格/" itemprop="url">
+                  flexbox布局的响应式表格
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-07-06T08:57:19+08:00" content="2017-07-06">
+              2017-07-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/07/06/flexbox布局的响应式表格/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/06/flexbox布局的响应式表格/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/07/06/flexbox布局的响应式表格/" class="leancloud_visitors" data-flag-title="flexbox布局的响应式表格">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          HTML table&#x5143;&#x7D20;&#x505A;&#x54CD;&#x5E94;&#x5F0F;&#x8868;&#x683C;&#x662F;&#x975E;&#x5E38;&#x96BE;&#x7528;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5927;&#x91CF;&#x7684;&#x6837;&#x677F;&#x548C;&#x5D4C;&#x5957;&#x7684;HTML&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x63A2;&#x8BA8;&#x4E00;&#x79CD;&#x4F7F;&#x7528;div&#x548C;Flexbox&#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x5C06;&#x7ED9;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x7684;&#x597D;&#x5904;&#x662F;&#x80FD;&#x591F;&#x521B;&#x5EFA;&#x5728;&#x6240;&#x6709;&#x5C3A;&#x5BF8;&#x5C4F;&#x5E55;&#x4E0A;&#x90FD;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x68D2;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x8868;&#x683C;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C06;&#x4F7F;&#x7528;SUIT CSS&#x4EE5;&#x6A21;&#x5757;&#x5316;&#x65B9;&#x5F0F;&#x5199;&#x5165;Sass&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;&#x4E00;&#x4E9B;Sass&#x5E93;
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/07/06/flexbox布局的响应式表格/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/27/理解AngularJS-Providers/" itemprop="url">
+                  理解AngularJS Providers
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-27T14:17:30+08:00" content="2017-05-27">
+              2017-05-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/27/理解AngularJS-Providers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/27/理解AngularJS-Providers/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/27/理解AngularJS-Providers/" class="leancloud_visitors" data-flag-title="理解AngularJS Providers">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          AngularJS 1.x&#x63D0;&#x4F9B;&#x4E86;&#x5982;&#x4E0B;5&#x4E2A;provider&#x65B9;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x80FD;&#x521B;&#x5EFA;&#x53EF;&#x88AB;&#x6CE8;&#x5165;&#x7684;&#x670D;&#x52A1;&#x3002;&#x4F46;&#x662F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x5462;&#xFF1F;&#x6240;&#x4EE5;&#x8FD9;&#x7BC7;&#x535A;&#x5BA2;&#x91CD;&#x70B9;&#x8BB0;&#x5F55;&#x4E0B;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x6765;&#x5E2E;&#x52A9;&#x81EA;&#x5DF1;&#x7406;&#x89E3;&#x5B83;&#x4EEC;&#x3002;valuefactoryserviceproviderconstantvalue&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x5E38;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x5728;&#x8FD0;&#x884C;&#x9636;&#x6BB5;&#x6CE8;&#x5165;Controller&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x5355;
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/27/理解AngularJS-Providers/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/13/青岛三日游攻略/" itemprop="url">
+                  青岛三日游攻略
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-13T09:48:21+08:00" content="2017-05-13">
+              2017-05-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/旅行/" itemprop="url" rel="index">
+                    <span itemprop="name">旅行</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/13/青岛三日游攻略/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/13/青岛三日游攻略/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/13/青岛三日游攻略/" class="leancloud_visitors" data-flag-title="青岛三日游攻略">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          &#x5E02;&#x5357;&#x533A;&#x6808;&#x6865;&#x3001;&#x6D77;&#x519B;&#x535A;&#x7269;&#x9986;&#x3001;&#x9C81;&#x8FC5;&#x516C;&#x56ED;&#x3001;&#x5C0F;&#x9752;&#x5C9B;&#x3001;&#x7B2C;&#x4E00;&#x6D77;&#x6C34;&#x6D74;&#x573A;&#x3001;&#x516B;&#x5927;&#x5173;&#x3001;&#x97F3;&#x4E50;&#x5E7F;&#x573A;&#x3001;&#x4E94;&#x56DB;&#x5E7F;&#x573A;&#x3001;&#x9752;&#x5C9B;&#x5965;&#x6797;&#x5339;&#x514B;&#x5E06;&#x8239;&#x4E2D;&#x5FC3;&#x5E02;&#x5317;&#x533A;&#x5564;&#x9152;&#x4E00;&#x6761;&#x8857;&#x3001;&#x9752;&#x5C9B;&#x5564;&#x9152;&#x535A;&#x7269;&#x9986;&#x3001;&#x5929;&#x5E55;&#x57CE;&#x3001;&#x5288;&#x67F4;&#x9662;&#x3001;&#x5D02;&#x5C71;Day1&#x5982;&#x679C;&#x5230;&#x9152;&#x5E97;&#x8FD8;&#x65E9;&#xFF0C;&#x5C31;&#x53BB;&#x767B;&#x5DDE;&#x8DEF;&#x548C;&#x6216;&#x8005;&#x53F0;&#x4E1C;&#x6B65;&#x884C;&#x8857;&#x8F6C;&#x8F6C;&#x767B;&#x5DDE;&#x8DEF;&#x5564;&#x9152;&#x4E00;&#x6761;&#x8857;&#x3001;&#x9752;&#x5C9B;&#x5564;&#x9152;&#x535A;&#x7269;&#x9986;&#x3001;&#x5929;&#x5E55;&#x57CE;Day2&#x5D02;&#x5C71;
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/13/青岛三日游攻略/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/RESTful-web-API文档生成器/" itemprop="url">
+                  RESTful web API文档生成器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-10T13:45:49+08:00" content="2017-05-10">
+              2017-05-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/10/RESTful-web-API文档生成器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/10/RESTful-web-API文档生成器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/10/RESTful-web-API文档生成器/" class="leancloud_visitors" data-flag-title="RESTful web API文档生成器">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          &#x95EE;&#xFF1A;&#x5F00;&#x53D1;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x4EE3;&#x7801;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x7B54;&#xFF1A;API&#x63A5;&#x53E3;&#x6587;&#x6863;&#x5982;&#x679C;&#x4F60;&#x662F;&#x540E;&#x53F0;&#x5F00;&#x53D1;&#xFF0C;&#x662F;&#x5426;&#x4F1A;&#x6709;&#x4EE5;&#x4E0B;&#x56F0;&#x6270;&#xFF1A;&#x5F00;&#x53D1;API&#x63A5;&#x53E3;&#xFF0C;&#x8FD8;&#x8981;&#x901A;&#x8FC7;wiki&#x5199;&#x63A5;&#x53E3;&#x6587;&#x6863;&#xFF0C;&#x4E25;&#x91CD;&#x5F71;&#x54CD;&#x6548;&#x7387;&#x63A5;&#x53E3;&#x4E0D;&#x662F;&#x4E00;&#x6B21;&#x5C31;&#x80FD;&#x5B9A;&#x4E0B;&#x6765;&#x7684;&#xFF0C;&#x540E;&#x7EED;&#x53EF;&#x80FD;&#x8FD8;&#x8981;&#x7EF4;&#x62A4;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x9700;&#x8981;&#x53BB;&#x4FEE;&#x6539;&#x6587;&#x6863;&#x5982;&#x679C;&#x4F60;&#x662F;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x662F;&#x5426;&#x6709;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x56F0;&#x6270;&#xFF1A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x600E;&#x4E48;&#x5C11;&#x5B5
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/10/RESTful-web-API文档生成器/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/06/Node-js-aes-128-cbc加密和解密/" itemprop="url">
+                  Node.js aes-128-cbc加密和解密
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-06T11:31:52+08:00" content="2017-05-06">
+              2017-05-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/06/Node-js-aes-128-cbc加密和解密/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/06/Node-js-aes-128-cbc加密和解密/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/06/Node-js-aes-128-cbc加密和解密/" class="leancloud_visitors" data-flag-title="Node.js aes-128-cbc加密和解密">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Java&#x7A0B;&#x5E8F;&#x4E2D;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x7684;AES&#x52A0;&#x5BC6;&#x6A21;&#x5F0F;&#x662F;AES/CBC/PKCS5Padding&#xFF0C;&#x5728;Node.js&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x662F;aes-128-cbc&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5F15;&#x5165;Node.js&#x7684;crypto&#x6A21;&#x5757;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x8BF7;&#x67E5;&#x770B;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x3002;12345678910111213141516171819202122232425262728293031323334353637383940&apos;use strict&apos;;const crypto = require(&apos;crypto&apos;);const ALG_STRING = &apos;aes-128-cbc&apos;,  KEY = &apos;wjl891014#gmail.com&apos;,  IV = [ 0xcb, 0x53, 0x03, 0x0f, 0xe0, 0x79, 0x9d, 0xdc, 0x80, 0xa9, 0x83, 0xf1, 0x03, 0xb6, 0x59, 0x83 ];const md5sum = str =&gt; {  return crypto.createHash(&apos;md5&apos;)    .update(str)    .digest()    .slice(0, 16);};const encrypt = str =&gt; {  const key = md5sum(KEY);  // key&#x548C;IV &#x5FC5;&#x987B;&#x662F;16
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/06/Node-js-aes-128-cbc加密和解密/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/04/CentOS-ftp服务搭建/" itemprop="url">
+                  CentOS ftp服务搭建
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-04T11:33:03+08:00" content="2017-05-04">
+              2017-05-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/04/CentOS-ftp服务搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/04/CentOS-ftp服务搭建/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/04/CentOS-ftp服务搭建/" class="leancloud_visitors" data-flag-title="CentOS ftp服务搭建">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          &#x597D;&#x8BB0;&#x6027;&#x4E0D;&#x5982;&#x70C2;&#x7B14;&#x5934;&#x6BCF;&#x6B21;&#x60F3;&#x8981;windows&#x548C;linux&#x4E92;&#x4F20;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x90FD;&#x5F97;&#x53BB;&#x641C;&#x7D22;&#x201C;Linux ftp&#x670D;&#x52A1;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x201D;&#xFF0C;&#x91CD;&#x590D;&#x7684;&#x6B21;&#x6570;&#x592A;&#x591A;&#xFF0C;&#x8FD8;&#x662F;&#x628A;&#x5B83;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x5427;&#xFF01;&#xFF01;&#xFF01;&#x5B89;&#x88C5;vsftpd ftp1yum -y install ftp vsftpd&#x5907;&#x4EFD;vsftpd&#x539F;&#x6709;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;12cd /etc/vsftpd/cp vsftpd.conf vsftpd.conf.origin&#x521B;&#x5EFA;&#x5BC6;&#x7801;&#x660E;&#x6587;&#x6587;&#x4EF6;123vim /etc/vsftpd/vftpuser.txt# brucewar# password&#x6839;&#x636E;&#x660E;&#x6587;&#x521B;&#x5EFA;&#x5BC6;&#x7801;DB&#x6587;&#x4EF6;1db_load -T -t hash -f /etc/vsftpd/vftpuser.txt /etc/vsftpd/vftpuser.db&#x67E5;&#x770B;&#x5BC6;&#x7801;&#x6570;&#x636E;&#x6587;&#x4EF6;12file /etc/vsftpd/vftpuser.db# /etc/vsftpd
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/04/CentOS-ftp服务搭建/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -361,7 +1559,7 @@
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="/2017/03/30/细胞卫士/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/30/细胞卫士/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/30/细胞卫士/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -395,1256 +1593,11 @@
       
         
           
-          &#x6700;&#x8FD1;&#x8EAB;&#x4F53;&#x4E0D;&#x8212;&#x670D;&#xFF0C;&#x5565;&#x4E8B;&#x4E0D;&#x60F3;&#x505A;&#xFF0C;&#x4E0E;&#x8840;&#x5E38;&#x89C4;&#x68C0;&#x67E5;&#x63A5;&#x89E6;&#x7684;&#x4E5F;&#x591A;&#x3002;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x628A;&#x9AD8;&#x4E2D;&#x5B66;&#x7684;&#x751F;&#x7269;&#x77E5;&#x8BC6;&#x90FD;&#x8FD8;&#x7ED9;&#x8001;&#x5E08;&#x4E86;&#x3002;
-&#x6240;&#x4EE5;&#x6709;&#x5FC5;&#x8981;&#x6765;&#x666E;&#x53CA;&#x4E00;&#x4E0B;&#x8840;&#x6DB2;&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7EC6;&#x80DE;&#x7684;&#x4F5C;&#x7528;&#x3002;
-
-&#x767D;&#x7EC6;&#x80DE;&#xFF1A;&#x6740;&#x706D;&#x7EC6;&#x83CC;&#x548C;&#x75C5;&#x6BD2;&#x5E76;&#x76D1;&#x63A7;&#x8EAB;&#x4F53;&#x7684;&#x7A33;&#x5B9A;&#xFF0C;&#x767D;&#x7EC6;&#x80DE;&#x53C8;&#x5206;&#x4E3A;&#x4E0B;&#x9762;4&#x9879;
-
-&#x4E2D;&#x6027;&#x7C92;&#x7EC6;&#x80DE;&#xFF1A;&#x767D;&#x7EC6;&#x80DE;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6210;&#x5206;&#xFF0C;&#x8D77;&#x541E;&#x566C;&#x548C;&#x6740;&#x83CC;&#x4F5C;&#x7528;
-&#x6DCB;&#x5DF4;&
+          &#x6700;&#x8FD1;&#x8EAB;&#x4F53;&#x4E0D;&#x8212;&#x670D;&#xFF0C;&#x5565;&#x4E8B;&#x4E0D;&#x60F3;&#x505A;&#xFF0C;&#x4E0E;&#x8840;&#x5E38;&#x89C4;&#x68C0;&#x67E5;&#x63A5;&#x89E6;&#x7684;&#x4E5F;&#x591A;&#x3002;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x628A;&#x9AD8;&#x4E2D;&#x5B66;&#x7684;&#x751F;&#x7269;&#x77E5;&#x8BC6;&#x90FD;&#x8FD8;&#x7ED9;&#x8001;&#x5E08;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x6709;&#x5FC5;&#x8981;&#x6765;&#x666E;&#x53CA;&#x4E00;&#x4E0B;&#x8840;&#x6DB2;&#x4E2D;&#x91CD;&#x8981;&#x7684;&#x7EC6;&#x80DE;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x767D;&#x7EC6;&#x80DE;&#xFF1A;&#x6740;&#x706D;&#x7EC6;&#x83CC;&#x548C;&#x75C5;&#x6BD2;&#x5E76;&#x76D1;&#x63A7;&#x8EAB;&#x4F53;&#x7684;&#x7A33;&#x5B9A;&#xFF0C;&#x767D;&#x7EC6;&#x80DE;&#x53C8;&#x5206;&#x4E3A;&#x4E0B;&#x9762;4&#x9879;&#x4E2D;&#x6027;&#x7C92;&#x7EC6;&#x80DE;&#xFF1A;&#x767D;&#x7EC6;&#x80DE;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6210;&#x5206;&#xFF0C;&#x8D77;&#x541E;&#x566C;&#x548C;&#x6740;&#x83CC;&#x4F5C;&#x7528;&#x6DCB;&#x5DF4;&#x7EC6
           ...
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/30/细胞卫士/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/09/仿知乎头像上传/" itemprop="url">
-                  仿知乎头像上传
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-02-09T17:47:47+08:00" content="2017-02-09">
-              2017-02-09
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端开发/" itemprop="url" rel="index">
-                    <span itemprop="name">前端开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/02/09/仿知乎头像上传/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/仿知乎头像上传/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/02/09/仿知乎头像上传/" class="leancloud_visitors" data-flag-title="仿知乎头像上传">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x5565;&#x90FD;&#x4E0D;&#x8BF4;&#xFF0C; &#x76F4;&#x63A5;&#x5148;&#x6765;&#x4E00;&#x5F20;&#x6548;&#x679C;&#x56FE;&#x2026;&#x2026;
-
-&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;&#xFF0C;&#x522B;&#x6025;&#xFF0C;&#x54B1;&#x4EEC;&#x5148;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x70B9;&#xFF1A;
-
-&#x56FE;&#x7247;&#x9884;&#x89C8;
-&#x56FE;&#x7247;&#x62D6;&#x62FD;
-&#x56FE;&#x7247;&#x7F29;&#x653E;
-&#x56FE;&#x7247;&#x88C1;&#x526A;
-
-&#x56FE;&#x7247;&#x9884;&#x89C8;&#x56FE;&#x7247;&#x9884;&#x89C8;&#x7684;&#x529F;&#x80FD;&#x6280;&#x672F;&#x65B9;&#x6848;&#x662F;&#x5C06;&#x7528;&#x6237;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x8F6C;&#x6210;Base64&#x7F16;&#x7801;&#x5E76;&#x8BBE;&#x7F6E;&#x5230;&lt;img&gt;&#x6807;&#x7B7E;&#x7684;src&#x5C5E;&#x6027;&#xFF0C;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x7684;Base64&#x7F16;&#x7801;&#x9700;&#x8981;&#x901A;&#x8FC7;HTML5&#x7684;&#x65B0;&#x7279;&#x6027;FileReader&#xFF0C;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;
-123456789101
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/02/09/仿知乎头像上传/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/13/windows下node版本管理-nvm-windows/" itemprop="url">
-                   windows下node版本管理:nvm-windows
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-01-13T09:18:18+08:00" content="2017-01-13">
-              2017-01-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/nvm/" itemprop="url" rel="index">
-                    <span itemprop="name">nvm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/01/13/windows下node版本管理-nvm-windows/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/13/windows下node版本管理-nvm-windows/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/13/windows下node版本管理-nvm-windows/" class="leancloud_visitors" data-flag-title=" windows下node版本管理:nvm-windows">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x6700;&#x8FD1;&#x5DE5;&#x4F5C;&#x4E0A;&#x63A5;&#x624B;&#x4E86;&#x4E24;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x53EF;&#x5B83;&#x4EEC;&#x4F9D;&#x8D56;&#x7684;node&#x7248;&#x672C;&#x4E0D;&#x540C;&#xFF0C;&#x4E8E;&#x662F;&#x60F3;&#x5230;&#x4E86;&#x4E4B;&#x524D;&#x7528;&#x7684;nvm&#xFF08;Node Version Manager&#xFF09;&#x3002;
-
-https://github.com/creationix/nvm
-
-&#x4E4B;&#x524D;&#x5B89;&#x88C5;nvm&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x901A;&#x8FC7;npm install nvm&#xFF0C;&#x800C;&#x65B0;&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x6216;&#x8005;&#x624B;&#x52A8;&#x5B89;&#x88C5;&#x3002;&#x76EE;&#x524D;&#xFF0C;nvm&#x6CA1;&#x6709;&#x63D0;&#x4F9B;windows&#x7684;&#x652F;&#x6301;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5176;&#x6587;&#x6863;&#x4E2D;&#x63D0;&#x5230;&#x4E86;nvm-windows&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x3002;
-
-https://github.com/coreybutler/nvm-windows
-
-&#x5B89;&#x88C5;&#x5728;&#x5B89;&#x88C5;nvm-windows&#x524D;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#xFF1A;
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/13/windows下node版本管理-nvm-windows/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/25/2016年终总结/" itemprop="url">
-                  2016年终总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-25T00:00:00+08:00" content="2016-12-25">
-              2016-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/25/2016年终总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/2016年终总结/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/25/2016年终总结/" class="leancloud_visitors" data-flag-title="2016年终总结">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-
-&#x53C8;&#x5230;&#x4E86;&#x4E00;&#x5E74;&#x4E00;&#x5EA6;&#x7684;&#x5723;&#x8BDE;&#x8282;&#xFF0C;&#x6BCF;&#x5F53;&#x5230;&#x4E86;&#x8FD9;&#x5929;&#x5C31;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E00;&#x5E74;&#x5C31;&#x8981;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x53C8;&#x957F;&#x4E86;&#x4E00;&#x5C81;&#x3002;&#x5176;&#x5B9E;&#x6211;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x522B;&#x559C;&#x6B22;&#x5199;&#x5E74;&#x7EC8;&#x603B;&#x7ED3;&#x7684;&#x4EBA;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x6211;&#x6765;&#x8BF4;&#xFF0C;2016&#x662F;&#x201C;&#x4E0D;&#x5B89;&#x5206;&#x201D;&#x7684;&#x4E00;&#x5E74;&#x3002;&#x5F53;&#x7136;&#x8FD9;&#x91CC;&#x7684;&#x4E0D;&#x5B89;&#x5206;&#x52A0;&#x4E86;&#x5F15;&#x53F7;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4ECA;&#x5E74;&#x7ECF;&#x5386;&#x4E86;&#x633A;&#x591A;&#x4E8B;&#xFF0C;&#x4E5F;&#x6210;&#x957F;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x6211;&#x7528;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x8BCD;&#x6765;&#x603B;&#x7ED3;&#x6211;&#x7684;2016&#xFF1A;
-
-&#x8BFB;&#x4
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/25/2016年终总结/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/20/npm3-0新的依赖解决方案/" itemprop="url">
-                  npm3.0新的依赖解决方案
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-20T23:02:20+08:00" content="2016-12-20">
-              2016-12-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/npm/" itemprop="url" rel="index">
-                    <span itemprop="name">npm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/20/npm3-0新的依赖解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/20/npm3-0新的依赖解决方案/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/20/npm3-0新的依赖解决方案/" class="leancloud_visitors" data-flag-title="npm3.0新的依赖解决方案">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x6700;&#x8FD1;&#x7ED9;&#x6211;&#x7684;&#x88C5;&#x5907;&#xFF08;Thinkpad S3-s431&#xFF09;&#x5347;&#x4E86;&#x4E00;&#x4E0B;&#x7EA7;&#xFF0C;&#x5C06;&#x539F;&#x672C;&#x7528;&#x6765;&#x52A0;&#x901F;&#x7F13;&#x5B58;&#x7684;24G&#x56FA;&#x6001;&#x786C;&#x76D8;&#x6362;&#x6210;&#x4E86;128G&#x3002;&#x6240;&#x4EE5;&#x5F97;&#x91CD;&#x88C5;&#x7CFB;&#x7EDF;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x5806;&#x8F6F;&#x4EF6;&#x4E5F;&#x5F97;&#x91CD;&#x88C5;&#x3002;&#x5305;&#x62EC;Node.js&#x3002;
-&#x5B89;&#x88C5;&#x4E86;&#x6700;&#x65B0;&#x7684;Node.js&#xFF08;v6.9.2&#xFF09;,npm&#xFF08;v3.10.9&#xFF09;&#x3002;&#x7531;&#x4E8E;node_modules&#x91CC;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x7ED3;&#x6784;&#x592A;&#x6DF1;&#xFF0C;&#x65E0;&#x6CD5;&#x79FB;&#x52A8;&#xFF0C;&#x53EA;&#x80FD;&#x53BB;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;npm install&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x73B0;node_modules&#x6587;&#x4EF6;&#x5939;&#x7ED3;&#x6784;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;
-
-&#x4E00;&#x4
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/20/npm3-0新的依赖解决方案/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/05/GitBook平台发布教程/" itemprop="url">
-                  GitBook平台发布教程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-05T17:11:25+08:00" content="2016-12-05">
-              2016-12-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/GitBook/" itemprop="url" rel="index">
-                    <span itemprop="name">GitBook</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/05/GitBook平台发布教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/05/GitBook平台发布教程/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/05/GitBook平台发布教程/" class="leancloud_visitors" data-flag-title="GitBook平台发布教程">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x6700;&#x8FD1;&#x5174;&#x8DA3;&#x6240;&#x81F4;&#x7FFB;&#x8BD1;&#x4E86;&#x4E00;&#x672C;&#x82F1;&#x6587;&#x7684;SVG&#x6559;&#x7A0B;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x6258;&#x7BA1;&#x5728;GitHub&#xFF0C;&#x90E8;&#x7F72;&#x4E8E;GitBook&#x3002;&#x4E3A;&#x4E86;&#x7ED9;&#x5927;&#x5BB6;&#x6700;&#x76F4;&#x89C2;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x732E;&#x4E0A;&#x6559;&#x7A0B;&#x90E8;&#x7F72;&#x5730;&#x5740;&#xFF1A;https://svg.brucewar.me&#x3002;&#x8FD9;&#x4E5F;&#x662F;&#x6211;&#x7B2C;&#x4E00;&#x6B21;&#x7FFB;&#x8BD1;&#x82F1;&#x6587;&#x6587;&#x6863;&#xFF0C;&#x4E5F;&#x662F;&#x6211;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;GitBook&#x90E8;&#x7F72;&#x7535;&#x5B50;&#x4E66;&#x3002;&#x6559;&#x7A0B;&#x867D;&#x7136;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x57FA;&#x672C;&#x6D89;&#x53CA;&#x4E86;SVG&#x7684;&#x6240;&#x6709;&#x77E5;&#x8BC6;&#x70B9;&#x3002;
-
-&#x5582;&#x5582;&#x5582;&#xFF0C;&#x8DD1;&#x9898;&#x4E86;&#x554A;&#xFF01;
-
-&#x56DE;&#x5230;&#x6B63;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x90E8;&#x7F72;&#x7535;&#x5B50;&#x
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/05/GitBook平台发布教程/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/29/跑步带给了我什么/" itemprop="url">
-                  跑步带给了我什么
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-29T15:40:11+08:00" content="2016-11-29">
-              2016-11-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/29/跑步带给了我什么/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/29/跑步带给了我什么/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/29/跑步带给了我什么/" class="leancloud_visitors" data-flag-title="跑步带给了我什么">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x4ECE;&#x5E74;&#x521D;2&#x6708;&#x4EFD;&#x5230;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x5DF2;&#x7ECF;&#x575A;&#x6301;&#x8DD1;&#x6B65;&#x5927;&#x534A;&#x5E74;&#x4E86;&#xFF0C;&#x867D;&#x7136;&#x9891;&#x7387;&#x4E0D;&#x9AD8;&#xFF08;&#x5E73;&#x5747;&#x4E00;&#x5468;&#x8DD1;&#x4E09;&#x6B21;&#xFF0C;&#x6BCF;&#x6B21;5&#x516C;&#x91CC;&#xFF09;&#xFF0C;&#x59D1;&#x4E14;&#x7B97;&#x662F;&#x575A;&#x6301;&#x4E0B;&#x6765;&#x4E86;&#x3002;&#x8FD8;&#x8BB0;&#x5F97;&#x521A;&#x5F00;&#x59CB;&#x662F;&#x56E0;&#x4E3A;&#x524D;&#x540C;&#x4E8B;&#xFF08;&#x857E;&#x7237;&#x548C;&#x963F;&#x6C64;&#xFF09;&#x7684;&#x6002;&#x607F;&#xFF0C;&#x8BA9;&#x6211;&#x4E00;&#x8D77;&#x62A5;&#x540D;&#x53C2;&#x52A0;&#x4E0A;&#x6D77;&#x677E;&#x6C5F;&#x7684;&#x9996;&#x5C4A;&#x534A;&#x7A0B;&#x9A6C;&#x62C9;&#x677E;&#x6BD4;&#x8D5B;&#xFF0C;&#x4E0D;&#x8FC7;&#x56E0;&#x4E3A;&#x5927;&#x5BB6;&#x90FD;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x8DD1;&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6562;&#x62A5;&#x534A;&#x7A0B;&#xFF0C;&#x6700;&#x7EC8;&#x62A5;&#x7684;&#x662F;12km&#
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/29/跑步带给了我什么/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/27/D3.js-Draggable and Scalable Tree/" itemprop="url">
-                  D3.js（Draggable and Scalable Tree）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-27T13:32:26+08:00" content="2016-10-27">
-              2016-10-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/D3-js/" itemprop="url" rel="index">
-                    <span itemprop="name">D3.js</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/27/D3.js-Draggable and Scalable Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/27/D3.js-Draggable and Scalable Tree/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/27/D3.js-Draggable and Scalable Tree/" class="leancloud_visitors" data-flag-title="D3.js（Draggable and Scalable Tree）">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x56E0;&#x4E3A;&#x6700;&#x8FD1;&#x624B;&#x4E0A;&#x6709;&#x4E2A;&#x5C0F;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x53EF;&#x7F29;&#x653E;&#x548C;&#x53EF;&#x62D6;&#x62FD;&#x7684;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#xFF0C;&#x6211;&#x4FBF;&#x53BB;&#x7814;&#x8BFB;&#x4E86;D3&#x5B98;&#x7F51;&#x7ED9;&#x7684;&#x4E00;&#x4E2A;&#x6811;&#x5F62;&#x7684;&#x4F8B;&#x5B50;&#x3002;
-&#x5E03;&#x5C40;&#xFF08;Layout&#xFF09;&#x539F;&#x672C;&#x6211;&#x4EE5;&#x4E3A;&#x7406;&#x89E3;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x9009;&#x62E9;&#x5668;&#x3001;&#x5143;&#x7D20;&#x64CD;&#x4F5C;&#x3001;Enter&#x3001;Exit&#x5C31;&#x80FD;&#x53BB;&#x770B;&#x5B9E;&#x4F8B;&#x7684;&#x4EE3;&#x7801;&#x4E86;&#xFF0C;&#x540E;&#x6765;&#x53D1;&#x73B0;&#x6211;&#x9519;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x7406;&#x89E3;&#x4E00;&#x4E0B;D3&#x4E2D;&#x5E03;&#x5C40;&#xFF08;Layout&#xFF09;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x5E03;&#x5C40;&#x662F;D3&#x4E2D;&#x4E00;&#x4E2A;&#x5341;&#x5206;&#x91CD;&#x8981;&#x7
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/27/D3.js-Draggable and Scalable Tree/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/25/D3.js-完整的柱状图/" itemprop="url">
-                  D3.js（完整的柱状图）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-25T10:59:26+08:00" content="2016-10-25">
-              2016-10-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/D3-js/" itemprop="url" rel="index">
-                    <span itemprop="name">D3.js</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/25/D3.js-完整的柱状图/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/25/D3.js-完整的柱状图/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/25/D3.js-完整的柱状图/" class="leancloud_visitors" data-flag-title="D3.js（完整的柱状图）">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x770B;&#x4E00;&#x4E0B;&#x6700;&#x7EC8;&#x7684;&#x67F1;&#x72B6;&#x56FE;&#x6548;&#x679C;&#x5C55;&#x793A;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x67F1;&#x72B6;&#x56FE;&#x9700;&#x8981;&#x5305;&#x542B;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x77E9;&#x5F62;&#x3001;&#x6587;&#x5B57;&#x3001;&#x5750;&#x6807;&#x8F74;&#x3002;
-
-&#x6DFB;&#x52A0;SVG&#x753B;&#x5E03;12345678910111213141516// &#x753B;&#x5E03;&#x5927;&#x5C0F;var width = 400,height = 400;// &#x753B;&#x5E03;&#x56DB;&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x7559;&#x767D;var margin = {	top: 20,	right: 30,	bottom: 20,	left: 30};var chart = d3.select(&apos;.chart&apos;).attr(&apos;width&apos;, width).attr(&apos;height&apos;, height).append(&apos;g&apos;);
-&#x5B9A;&#x4E49;&#x6BD4;&#x4F8B;&#x5C3A;12345// define x,y point rulevar x = d3.scale.ordinal().rangeRoundBands([0, width - margin.left - margin.right]);var y = d3.scale.linear().rang
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/25/D3.js-完整的柱状图/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/24/D3.js-入门篇/" itemprop="url">
-                  D3.js（入门篇）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-24T16:26:58+08:00" content="2016-10-24">
-              2016-10-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/D3-js/" itemprop="url" rel="index">
-                    <span itemprop="name">D3.js</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/24/D3.js-入门篇/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/24/D3.js-入门篇/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/24/D3.js-入门篇/" class="leancloud_visitors" data-flag-title="D3.js（入门篇）">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          &#x7B80;&#x4ECB;D3.js&#xFF08;&#x540E;&#x9762;&#x7B80;&#x79F0;D3&#xFF0C;&#x5B98;&#x65B9;&#x9996;&#x9875;https://d3js.org/&#xFF09;&#x662F;&#x57FA;&#x4E8E;JavaScript&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x5957;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#xFF0C;&#x9879;&#x76EE;&#x5F00;&#x6E90;&#x5728;GitHub&#xFF0C;&#x9879;&#x76EE;&#x6392;&#x540D;&#x9760;&#x524D;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;API&#xFF0C;&#x5982;DOM&#xFF08;Document Object Model&#xFF09;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x7ED8;&#x5236;&#x56FE;&#x5F62;&#x7B49;&#x3002;&#x622A;&#x6B62;&#x672C;&#x6587;&#x53D1;&#x8868;&#x65F6;&#x95F4;&#xFF0C;D3&#x5DF2;&#x66F4;&#x65B0;&#x5230;v4&#xFF0C;v4&#x5728;v3&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x6709;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x6539;&#x53D8;&#xFF08;&#x56E0;&#x4E3A;v3&#x53EA;&#x652F;&#x6301;&#x901A;&#x8FC7;svg&#x548C;dom&#x6784;&#x56FE;&#xFF0C;&#x6240;&#x4EE5;v4&#x5728;v3&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/24/D3.js-入门篇/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1719,7 +1672,7 @@ https://github.com/coreybutler/nvm-windows
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1727,7 +1680,7 @@ https://github.com/coreybutler/nvm-windows
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1736,7 +1689,7 @@ https://github.com/coreybutler/nvm-windows
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1826,7 +1779,7 @@ https://github.com/coreybutler/nvm-windows
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://baohongfei.com" title="BaoHongfei" target="_blank">BaoHongfei</a>
+                  <a href="http://blog.baohongfei.com" title="BaoHongfei" target="_blank">BaoHongfei</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -1839,6 +1792,10 @@ https://github.com/coreybutler/nvm-windows
               
                 <li class="links-of-blogroll-item">
                   <a href="http://deliazhi.com" title="Delia" target="_blank">Delia</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.seaofstars.tech" title="徐胖子" target="_blank">徐胖子</a>
                 </li>
               
             </ul>
@@ -1862,7 +1819,7 @@ https://github.com/coreybutler/nvm-windows
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1969,33 +1926,6 @@ https://github.com/coreybutler/nvm-windows
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"brucewar"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-      
-      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js"></script>
-    
-  
-
-
-
 
 
   
@@ -2018,6 +1948,7 @@ https://github.com/coreybutler/nvm-windows
       
     </script>
   
+
 
 
 

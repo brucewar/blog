@@ -5,6 +5,12 @@
            data-title="{{ page.title }}" data-url="{{ page.permalink }}">
       </div>
     {% endif %}
+    {% if theme.cloudtie %}
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    {% endif %}
+    {% if theme.livere %}
+      <div id="livere-wrapper" class="livere-wrapper"></div>
+    {% endif %}
     {% if theme.disqus_shortname %}
       <div id="disqus_thread">
         <noscript>
@@ -13,5 +19,6 @@
         </noscript>
       </div>
     {% endif %}
+
   </div>
 {% endif %}
